@@ -7,11 +7,13 @@ async function manualERC191Sign() {
   // 1. 创建一个随机钱包（在实际应用中，你会使用真实的私钥）
   const wallet = ethers.Wallet.createRandom();
   // 2. 定义要签名的消息
-  const message = 'helloWorld';
+  const message = 'Hello, 世界!';
 
   // 3. 构造ERC191消息
   // 3.1 计算消息长度
   const messageLength = ethers.toUtf8Bytes(message).length;
+
+  console.log('消息长度:', messageLength);
 
   // 3.2 构造前缀
   const prefix = '\x19Ethereum Signed Message:\n' + messageLength;
