@@ -15,6 +15,7 @@ async function signMessage() {
   }
 
   const contractAddress = 'YOUR_CONTRACT_ADDRESS';
+
   const abi = [
     'function verify(address signer, tuple(string content, uint256 timestamp) message, uint8 v, bytes32 r, bytes32 s) public view returns (bool)'
   ];
@@ -50,6 +51,7 @@ async function signMessage() {
     const signerAddress = await signer.getAddress();
 
     const isValid = await contract.verify(signerAddress, message, v, r, s);
+
     console.log('Signature is valid:', isValid);
   } catch (error) {
     console.error('Error during signing process:', error);
