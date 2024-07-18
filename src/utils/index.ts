@@ -1,5 +1,5 @@
 import { parseAbi } from 'viem';
-import { publicClient } from '../client';
+import { publicClient } from '../client/client';
 
 /**
  * Get the current block number.
