@@ -1,11 +1,10 @@
-import {
-  getBlockNumber,
-  readNFTTotalSupply,
-  readNFTOwner,
-  readNFTMetadata
-} from './utils/index';
-
-import { getSignVerifyEvents } from './queryEvent';
+// import {
+//   getBlockNumber,
+//   readNFTTotalSupply,
+//   readNFTOwner,
+//   readNFTMetadata
+// } from './utils/index';
+// import { getSignVerifyEvents } from './queryEvent';
 import { queryUSDCtransferLog } from './queryUSDCtransferLog';
 /**
  * main function
