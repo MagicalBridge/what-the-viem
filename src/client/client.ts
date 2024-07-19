@@ -1,5 +1,5 @@
 import { createPublicClient, http } from 'viem';
-import { mainnet } from 'viem/chains';
+import { mainnet, sepolia } from 'viem/chains';
 
 /**
  * This is a public client that can be used to interact with the Ethereum mainnet.
@@ -10,4 +10,5 @@ export const publicClient = createPublicClient({
   transport: http(
     'https://eth-mainnet.g.alchemy.com/v2/wetra8HLzo_m-UswS8UJCnwdzS40X2wN'
   )
+  // transport: http('https://1rpc.io/sepolia')
 });

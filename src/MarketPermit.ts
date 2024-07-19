@@ -44,10 +44,6 @@ const TOKEN_ABI = [
 const TOKEN_ADDRESS = '0x3c510705cdbb9c2d8c6A68A44256fb331D1EDB56'; // 替换为你的 ERC20 代币地址
 
 export default async function testPermitBuyNFT() {
-  // 连接到以太坊网络
-  // const provider = new ethers.BrowserProvider((window as any).ethereum);
-  // const signer = await provider.getSigner();
-
   // 连接到以太坊提供者（例如 MetaMask）
   let provider, signer;
 
