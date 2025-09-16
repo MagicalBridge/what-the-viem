@@ -12,6 +12,7 @@ const proxyAddress = "0xaf88d065e77c8cc2239327c5edb3a432268e5831";
 // const IMPLEMENTATION_SLOT =
 //   "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc";
 const proxyAbi = [
+  "function admin() public view returns (address)",
   "function implementation() public view returns (address)"
 ];
 
@@ -24,6 +25,9 @@ async function getImplementation() {
   const proxy = new ethers.Contract(proxyAddress, proxyAbi, provider);
   const implAddress = await proxy.implementation();
   console.log("USDC Implementation Address on Arbitrum:", implAddress);
+
+  const admin = await proxy.admin();
+  console.log("USDC Admin Address on Arbitrum:", admin);
   // 0x86E721b43d4ECFa71119Dd38c0f938A75Fdb57B3
 }
 
