@@ -5,7 +5,8 @@
 //   readNFTMetadata
 // } from './utils/index';
 // import { getSignVerifyEvents } from './queryEvent';
-import { queryUSDCtransferLog } from './queryUSDCtransferLog';
+// import { queryUSDCtransferLog } from './queryUSDCtransferLog';
+import getImplementation from './getImplementation';
 /**
  * main function
  */
@@ -19,7 +20,8 @@ async function main() {
   // const metadata = await readNFTMetadata();
   // console.log('metadata:', metadata);
   // await getSignVerifyEvents();
-  await queryUSDCtransferLog();
+  // await queryUSDCtransferLog();
+  await getImplementation();
 }
 
 main();
